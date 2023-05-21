@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>深度学习环境安装</title>
+      <link href="/posts/21869/"/>
+      <url>/posts/21869/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、CUDA安装"><a href="#一、CUDA安装" class="headerlink" title="一、CUDA安装"></a>一、CUDA安装</h3><p>本人安装12.1版本的，因为cuda有良好的向下兼容性</p><p>1.安装</p><p>双击安装，依次点击下一步，选择自定义安装，将红框都勾选上，依次点击下一步安装即可</p><p>2.环境变量配置</p><p>点击我的电脑-属性-高级系统设置-环境变量，检查系统变量中是否有如下变量</p><div class="img-wrap"><div class="img-bg"><img class="img" src="https://file.jiangwuqiong.top/images/Blog/article/study/torch/image-20230521095524364.png"/></div></div><p>3.检查是否安装成功</p><p>重启电脑，win+r输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V</span><br></pre></td></tr></table></figure><p>出现如下界面，安装成功</p><div class="img-wrap"><div class="img-bg"><img class="img" src="https://file.jiangwuqiong.top/images/Blog/article/study/torch/image-20230521095647689.png"/></div></div><p>二、安装cudann</p><p>1.解压</p><p>将解压包解压，进入到安装目录中，如果你是跟着教程走的，那么默认路径是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1</span><br></pre></td></tr></table></figure><p>依次进入到对应文件夹中，将解压的文件复制到对应文件夹中</p><p>2.环境变量配置</p><p>找到系统变量中的Path，双击，依次新建如下变量</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\include</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\lib</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\libnvvp</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>3.检查是否安装成功</p><p>win+r cmd</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1</span><br><span class="line">cd .\extras\demo_suite</span><br><span class="line">.\bandwidthTest.exe</span><br></pre></td></tr></table></figure><p>出现如下，安装成功</p><div class="img-wrap"><div class="img-bg"><img class="img" src="https://file.jiangwuqiong.top/images/Blog/article/study/torch/image-20230521100535693.png"/></div></div><p>三、安装torch</p><p>1.安装</p><p>进入anaconda，点击open terminal</p><div class="img-wrap"><div class="img-bg"><img class="img" src="https://file.jiangwuqiong.top/images/Blog/article/study/torch/image-20230521101128900.png"/></div></div><p>依次安装三个包，格式如下，注意修改路径及包名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install C:\Users\Guo\Desktop\resource\bao\torch-1.12.0+cu113-cp39-cp39-win_amd64.whl</span><br></pre></td></tr></table></figure><p>有选择时y回车即可</p><p>2.检查是否安装成功</p><p>继续在环境中输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line"></span><br><span class="line">import torch</span><br><span class="line">print(torch.cuda.is_available()) </span><br></pre></td></tr></table></figure><p>出现true即可</p><div class="img-wrap"><div class="img-bg"><img class="img" src="https://file.jiangwuqiong.top/images/Blog/article/study/torch/image-20230521101907472.png"/></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 大学 </tag>
+            
+            <tag> torch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>谷歌实用插件分享</title>
       <link href="/posts/57479/"/>
       <url>/posts/57479/</url>
